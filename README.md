@@ -2,8 +2,8 @@
 
 ### Examples how to start [Flowex](https://github.com/antonmi/flowex) pipelines
 
-In general there are three options:
-#### Start pipelines in arbitrary supervised process
+###In general there are three options:
+#### 1. Start pipelines in arbitrary supervised process
 ```elixir
 defmodule PipelineGenServer do
   use GenServer
@@ -18,7 +18,7 @@ end
 ```
 You can also store pipeline structure in Agent or Application environment
 
-#### Start one pipeline per application. In that case pipeline supervisor will be the main supervisor in the application:
+#### 2. Start one pipeline per application. In that case pipeline supervisor will be the main supervisor in the application:
 ```elixir
 defmodule OnePipelinePerApp do
   use Application
@@ -31,7 +31,7 @@ defmodule OnePipelinePerApp do
 end
 ```
 
-#### Start several pipelines inside one application. In that case pipeline supervisors will be placed under application supervisor:
+#### 3. Start several pipelines inside one application. In that case pipeline supervisors will be placed under application supervisor:
 ```elixir
 defmodule TwoPipelinesPerApp do
   use Application

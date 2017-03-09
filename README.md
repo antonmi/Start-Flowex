@@ -31,7 +31,7 @@ defmodule OnePipelinePerApp do
 end
 ```
 
-#### 3. Start several pipelines inside one application. In that case pipeline supervisors will be placed under application supervisor:
+#### 3. Start several pipelines inside one application using `supervised_start` function. In that case pipeline supervisors will be placed under application supervisor:
 ```elixir
 defmodule TwoPipelinesPerApp do
   use Application
